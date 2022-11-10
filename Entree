@@ -1,0 +1,6 @@
+public class Entree extends Food{
+public Entree(String name, String description){
+    super(name, description);
+  
+}
+}
