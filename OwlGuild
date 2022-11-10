@@ -1,0 +1,49 @@
+import java.util.List;
+import java.util.ArrayList;
+public class OwlGuild {
+  //parent
+  private List<Cafe> cafe;
+
+  public List<Cafe> getCafe(){
+    return cafe;
+  }
+  public void setCafe(List<Cafe> cafe){
+    this.cafe = cafe;
+  }
+  public void init(){
+    Appetizer fondue = new Appetizer("Innkeeper's Fondue","a creamy, delicious, boozy fondue with dipping items.");
+    Appetizer hats = new Appetizer("Wizard Hats", "cheese stuffed pasta with hot honey drizzle." );
+
+    Entree stew = new Entree("Werebear Stew", "pork and chicken thighs.");
+    Entree waterdeep = new Entree("Waterdeep","a savory shrimp, bacon, eggs and rice dish.");
+    Entree dish = new Entree("Halfing Hotdish", "a potato casserole that is loaded with meat, bacon, cheese, and cream flavor.");
+
+    Dessert  cake = new Dessert("Winter Cake","a old fashion cheesecake with apple and raisins.");
+    Dessert fudge = new Dessert("Hot Roll", "a hot fudge brownie with hazenuts served with ice cream.");
+
+    ArrayList<Food> cafe1food = new ArrayList<Food>();
+      cafe1food.add(fondue);
+      cafe1food.add(hats);
+    
+    Cafe cafe1 = new Cafe("Appetizers", "Not looking for a large meal? We have what you need.", cafe1food);
+
+    ArrayList<Food> cafe2food = new ArrayList<>();
+      cafe2food.add(stew);
+      cafe2food.add(waterdeep);
+      cafe2food.add(dish);
+   
+    Cafe cafe2 = new Cafe("Entrees", "Everything comes with bread and cheese on the side.", cafe2food);
+    
+    
+    ArrayList<Food> cafe3food = new ArrayList<>();
+      cafe3food.add(cake);
+      cafe3food.add(fudge);
+    
+    Cafe cafe3 = new Cafe("Desserts", "Why not try our sweets?", cafe3food);
+
+    cafe = new ArrayList<Cafe>();
+    cafe.add(cafe1);
+    cafe.add(cafe2);
+    cafe.add(cafe3);
+  } 
+}
