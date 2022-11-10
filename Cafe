@@ -1,0 +1,38 @@
+import java.util.List;
+public class Cafe{
+//child
+  // properties
+  private String name;
+  private String description;
+  private List<Food> cafefood;
+  //arraylist of foods
+public Cafe(String name, String description, List<Food> food){
+  this.name = name;
+  this.description = description;
+  this.cafefood = food; 
+}
+  public String getName(){
+    return name;
+  }
+  public void setName(String name){
+    this.name = name;
+  }
+  public String getDescription(){
+    return description;
+  }
+  public void setDescription(String description){
+    this.description = description;
+  }
+  public List<Food> getCafefood(){
+    return cafefood;
+  }
+  public void setCafefood(List<Food>cafefood){
+    this.cafefood = cafefood;
+  }
+  
+@Override
+  public String toString(){
+    return "Food [ name =" + name +", description=" + description +",cafefood="+cafefood+"]";
+  }
+  // creating food: appetizers, entree, deserts
+}
